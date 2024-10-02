@@ -1,7 +1,7 @@
 <<<<<<< HEAD
-# E-Commerce open source
+# E-Commerce
 Creado con Node.js, Angular y MySQL
-![E-Commerce open source con Node.js y Angular]![Image](https://i.imgur.com/smLrZaa.png)
+![E-Commerce]![Image](https://i.imgur.com/smLrZaa.png)
 
 # Instalación
 ## Requisitos
