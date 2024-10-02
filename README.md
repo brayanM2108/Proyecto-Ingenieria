@@ -1,7 +1,7 @@
 <<<<<<< HEAD
 # E-Commerce open source
 Creado con Node.js, Angular y MySQL
-![E-Commerce open source con Node.js y Angular](https://imgur.com/a/Tjdp6w7)
+![E-Commerce open source con Node.js y Angular][img]https://i.imgur.com/smLrZaa.png[/img]
 
 # Tutorial
 Justo aquí: https://parzibyte.me/blog/2020/06/10/pequeno-e-commerce-angular-node-mysql-tienda-online/
