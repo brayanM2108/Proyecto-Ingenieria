@@ -23,7 +23,7 @@ __sordid details following...__
 
 # Créditos
 Codigo basado en este codigo open source:
-Justo aquí: https://parzibyte.me/blog/2020/06/10/pequeno-e-commerce-angular-node-mysql-tienda-online/
+https://parzibyte.me/blog/2020/06/10/pequeno-e-commerce-angular-node-mysql-tienda-online/
 
 # ECommerceAngularNode
 
