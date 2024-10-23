@@ -63,7 +63,9 @@ import { DetalleDeVentaComponent } from './detalle-de-venta/detalle-de-venta.com
     TarjetaProductoComponent,
     DetalleDeProductoComponent,
     TerminarCompraComponent,
-    DetalleDeVentaComponent
+    DetalleDeVentaComponent,
+
+  
   ],
   imports: [
     BrowserModule,

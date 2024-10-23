@@ -1,22 +1,30 @@
 .contenedor-padre {
   display: flex;
-  flex-flow: column;
-  height: 100%;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f3f4f6; /* Soft background color */
+  font-family: 'Arial', sans-serif; /* Consistent font style */
 }
 
 .barra {
   flex: 0 1 auto;
+  background-color: #0079ea; /* Primary color for the toolbar */
+  color: white;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 .contenido {
   flex: 1 1 auto;
+  padding: 20px;
+  background-color: #ffffff; /* Clean background for content */
+  overflow: auto; /* Ensures overflow content is scrollable */
 }
 
 .padding-10 {
   padding: 10px;
 }
+
 .example-fill-remaining-space {
-  /* This fills the remaining space, by using flexbox.
-     Every toolbar row uses a flexbox row layout. */
   flex: 1 1 auto;
 }

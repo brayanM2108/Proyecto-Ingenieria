@@ -1,30 +1,36 @@
-<mat-card>
-  <h1>Agregar producto</h1>
-  <p>
-    <mat-form-field>
-      <input matInput [(ngModel)]="productoModel.nombre"
-             type="text"
-             placeholder="Nombre">
-    </mat-form-field>
-  </p>
-  <p>
-    <mat-form-field>
-      <textarea rows="10" matInput [(ngModel)]="productoModel.descripcion"
-                placeholder="Descripción"></textarea>
-    </mat-form-field>
-  </p>
-  <p>
-    <mat-form-field>
-      <input matInput [(ngModel)]="productoModel.precio"
-             type="number"
-             placeholder="Precio">
-    </mat-form-field>
-  </p>
-  <label for="fotos">Fotos</label>
-  <br>
-  <input accept="image/png,image/jpeg" #foto required id="fotos" multiple type="file">
-  <p>
-    <app-loading-button [cargando]="cargando" texto="Guardar" (click)="guardar()"></app-loading-button>
-    <a routerLink="/productos" mat-raised-button color="primary" style="margin-left: 10px">Volver</a>
-  </p>
-</mat-card>
+<div class="contenedor">
+  <mat-card class="agregar-producto-card">
+  <mat-card-header>
+    <mat-card-title>Agregar producto</mat-card-title>
+  </mat-card-header>
+  
+  <mat-card-content>
+    <form class="form-agregar-producto">
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Nombre</mat-label>
+        <input matInput [(ngModel)]="productoModel.nombre" type="text" placeholder="Nombre del producto" required>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Descripción</mat-label>
+        <textarea rows="5" matInput [(ngModel)]="productoModel.descripcion" placeholder="Descripción del producto" required></textarea>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Precio</mat-label>
+        <input matInput [(ngModel)]="productoModel.precio" type="number" placeholder="Precio del producto" required>
+      </mat-form-field>
+
+      <div class="fotos-input">
+        <label for="fotos" class="fotos-label">Fotos</label>
+        <input accept="image/png, image/jpeg" #foto required id="fotos" multiple type="file" class="fotos-uploader">
+      </div>
+    </form>
+  </mat-card-content>
+
+  <mat-card-actions class="actions">
+    <app-loading-button [cargando]="cargando" texto="Guardar" (click)="guardar()" class="guardar-btn"></app-loading-button>
+    <a routerLink="/productos" mat-raised-button color="primary" class="volver-btn">Volver</a>
+  </mat-card-actions>
+  </mat-card>
+</div>
