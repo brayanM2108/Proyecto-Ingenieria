@@ -1,5 +1,11 @@
-/* Ajuste de contenedor de la tarjeta */
-.agregar-producto-card {
+.contenedor {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+mat-card {
   max-width: 1200px; /* Aumenta el ancho máximo */
   margin: 100px auto;
   padding: 20px ;
@@ -7,95 +13,60 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   background-color: #fff;
   width: 90%; /* Ajuste responsivo para pantallas más pequeñas */
-}
-.contenedor {
-  height: 80vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-/* Estilo para el encabezado de la tarjeta */
-mat-card-header {
-  text-align: center;
-  margin-bottom: 20px;
-  
+
 }
 
-.form-agregar-producto {
-  display: flex;
-  flex-direction: column;
-  gap: 15px; /* Espaciado entre campos */
+h1 {
+  text-align: center; /* Centrar el texto del encabezado */
+  color: #000000; /* Color del texto */
+  margin-bottom: 20px; /* Espacio inferior */
+  font-family: 'Arial', sans-serif; /* Fuente */
 }
 
-/* Ajuste de ancho para los campos */
-.full-width {
-  width: 100%;
+form {
+  display: flex; /* Usar flexbox para el diseño */
+  flex-direction: column; /* Colocar los elementos en columna */
 }
 
-.fotos-input {
-  display: flex;
-  flex-direction: column;
-  gap: 10px; /* Espacio entre el label y el input */
-  margin-top: 20px auto;
+mat-form-field {
+  width: 100%; /* Ancho completo del campo */
+  margin-bottom: 16px; /* Espacio entre campos */
 }
 
-.fotos-label {
-  font-weight: bold;
-  font-size: 16px; /* Ajuste de tamaño para el texto */
+mat-label {
+  color: #333; /* Color de las etiquetas */
 }
 
-.fotos-uploader {
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  padding: 8px;
-  background-color: #f9f9f9;
-  width: 100% auto;
-  font-size: 14px;
-  cursor: pointer;
+
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+  border-color: #3f51b5; /* Color de borde al enfocar */
+  outline: none; /* Sin borde externo */
 }
 
-.fotos-uploader:hover {
-  border-color: #888; /* Cambio de color al pasar el cursor */
+label {
+  margin-bottom: 8px; /* Espacio inferior */
+  font-weight: bold; /* Negrita para las etiquetas */
+  color: #555; /* Color de las etiquetas */
 }
 
-.fotos-uploader:focus {
-  border-color: #3f51b5; /* Color al hacer foco */
-  outline: none; /* Elimina el borde predeterminado del navegador */
+input[type="file"] {
+  display: block; /* Mostrar como bloque */
+  margin: 10px 0 20px; /* Espacio superior e inferior */
+  border: 1px solid #ccc; /* Borde ligero */
+  border-radius: 4px; /* Bordes redondeados */
+  padding: 10px; /* Espacio interno */
 }
 
-/* Acciones de la tarjeta */
-.actions {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
+p {
+  margin: 0; /* Eliminar márgenes predeterminados */
 }
 
-/* Estilo del botón "Guardar" */
-.guardar-btn {
-  /* Mejora visual del botón "Guardar" */
-  color: white;
-}
-
-/* Estilo del botón "Volver" */
-.volver-btn {
-  margin-left: 10px;
-}
-
-/* Ajustes responsivos */
-@media (max-width: 768px) {
-  .agregar-producto-card {
-    width: 100%;
-    padding: 15px;
-  }
-
-  .actions {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .guardar-btn,
-  .volver-btn {
-    width: 100%;
-    margin: 10px 0;
-  }
+a {
+  text-decoration: none; /* Sin subrayado */
+  color: #000000; /* Color del texto */
+  margin-top: 10px; /* Margen superior */
+  display: inline-block; /* Mostrar como bloque en línea */
 }

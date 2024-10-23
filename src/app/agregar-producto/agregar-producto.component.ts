@@ -26,7 +26,7 @@ import {MatSnackBar} from "@angular/material/snack-bar";
   styleUrls: ['./agregar-producto.component.css']
 })
 export class AgregarProductoComponent implements OnInit {
-  productoModel = new Producto("", "",);
+  productoModel = new Producto("", "", 0); // Asumiendo que el precio se maneja como número.
   @ViewChild("foto", {
     read: ElementRef
   }) foto: ElementRef;

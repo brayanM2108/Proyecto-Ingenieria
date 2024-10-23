@@ -56,17 +56,3 @@ mat-raised-button {
 mat-raised-button:hover {
   background-color: #303f9f; /* Color al pasar el ratón */
 }
-.boton-volver {
-  background-color: #03a9f4; /* Color de fondo deseado */
-  color: white; /* Color del texto */
-  border: none;
-  padding: 10px 20px;
-  margin: 5px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.boton-volver:hover {
-  background-color: #0288d1; /* Color del fondo al pasar el ratón por encima */
-}

@@ -24,12 +24,12 @@
           En el carrito de compras
         </mat-chip>
       </mat-chip-list>
-      <button *ngIf="!yaExiste" (click)="agregarAlCarrito()" class="carrito" mat-raised-button color="accent">
+      <button *ngIf="!yaExiste" (click)="agregarAlCarrito()" class="carrito" mat-raised-button color="">
 
         <mat-icon>add</mat-icon>
         Agregar al carrito
       </button>
-      <button *ngIf="yaExiste" (click)="quitarDelCarrito()" class="carrito" mat-raised-button color="accent">
+      <button *ngIf="yaExiste" (click)="quitarDelCarrito()" class="carrito" mat-raised-button color="">
         <mat-icon>delete</mat-icon>
         Quitar del carrito
       </button>

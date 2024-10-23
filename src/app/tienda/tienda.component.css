@@ -1,0 +1,25 @@
+.tarjetas-contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+app-tarjeta-producto {
+  flex: 0 0 calc(50% - 16px);
+  margin: 8px;
+  box-sizing: border-box;
+}
+
+app-tarjeta-producto h1,
+app-tarjeta-producto h2,
+app-tarjeta-producto p {
+  font-size: 16px; /* Asegúrate de que todos tengan el mismo tamaño */
+  margin: 0; /* Elimina márgenes adicionales */
+  line-height: 1.5; /* Mejora la legibilidad */
+}
+
+app-tarjeta-producto p {
+  overflow: hidden; /* Oculta el texto desbordado */
+  text-overflow: ellipsis; /* Agrega "..." para indicar truncamiento */
+  white-space: nowrap; /* Evita el salto de línea */
+}
