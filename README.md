@@ -1,10 +1,7 @@
 <<<<<<< HEAD
-# E-Commerce open source
+# E-Commerce
 Creado con Node.js, Angular y MySQL
-![E-Commerce open source con Node.js y Angular](https://parzibyte.me/blog/wp-content/uploads/2020/06/E-Commerce-en-Angular-y-Node-Vista-principal-de-tienda.png)
-
-# Tutorial
-Justo aquí: https://parzibyte.me/blog/2020/06/10/pequeno-e-commerce-angular-node-mysql-tienda-online/
+![E-Commerce]![Image](https://i.imgur.com/smLrZaa.png)
 
 # Instalación
 ## Requisitos
@@ -25,7 +22,8 @@ Justo aquí: https://parzibyte.me/blog/2020/06/10/pequeno-e-commerce-angular-nod
 __sordid details following...__
 
 # Créditos
-La imagen de "Gracias por su compra" fue tomada de https://icons8.com
+Codigo basado en este codigo open source:
+https://parzibyte.me/blog/2020/06/10/pequeno-e-commerce-angular-node-mysql-tienda-online/
 
 # ECommerceAngularNode
 
