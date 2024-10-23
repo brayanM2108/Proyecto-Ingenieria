@@ -19,7 +19,6 @@ Creado con Node.js, Angular y MySQL
 8. Abrir otra terminal, y dentro de **api** ejecutar ``node index.js`` 
 9. Navegar a localhost:4200
 
-__sordid details following...__
 
 # Créditos
 Codigo basado en este codigo open source:
