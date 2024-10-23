@@ -1,7 +1,7 @@
 <<<<<<< HEAD
 # E-Commerce
 Creado con Node.js, Angular y MySQL
-![E-Commerce]![Image](https://imgur.com/FkLnPNQ)
+![E-Commerce]![Image](https://imgur.com/FkLnPNQ.png)
 
 # Instalación
 ## Requisitos
