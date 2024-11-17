@@ -29,8 +29,10 @@ export class ProductosComponent implements OnInit {
   public productos = [];
   public columnas = ['nombre', 'descripcion', 'precio', 'eliminar'];
 
+  
   constructor(private router: Router, private productosService: ProductosService) {
   }
+  
 
   async eliminar(producto) {
     if (!confirm("¿Realmente lo quieres eliminar<?")) {

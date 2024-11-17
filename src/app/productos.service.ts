@@ -18,12 +18,13 @@
 import {Injectable} from '@angular/core';
 import {Producto} from "./producto";
 import {HttpService} from "./http.service";
-
+import {environment} from "../environments/environment";
 @Injectable({
   providedIn: 'root'
 })
 export class ProductosService {
 
+  apiUrl  = "http://localhost:3000"
   constructor(private http: HttpService) {
   }
 
@@ -45,6 +46,12 @@ export class ProductosService {
   public async obtenerProductos() {
     return await this.http.get("/productos");
   }
+  
+  public async getAll(filter) {
+    return await this.http.get("/productos".concat(filter));
+     
+    }
+  
 
   public async obtenerProductosConFotos() {
     return await this.http.get("/productos_con_fotos");

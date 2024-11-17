@@ -18,17 +18,22 @@
 import {Component, OnInit} from '@angular/core';
 import {CarritoService} from "./carrito.service";
 import {DataSharingService} from "./data-sharing.service";
-
+import { ProductosService } from './productos.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+  search : string = "";
   title = 'e-commerce-angular-node';
   public productos = [];
-
-  constructor(private carritoService: CarritoService, private dataSharingService: DataSharingService) {
+ 
+  constructor(
+    private carritoService: CarritoService,
+    private dataSharingService: DataSharingService,
+    private productosService: ProductosService
+     ) {
     // Comunicación entre componentes
     this.dataSharingService.currentMessage.subscribe(mensaje => {
       if (mensaje == "car_updated") {
@@ -52,5 +57,17 @@ export class AppComponent implements OnInit {
     this.refrescarCarrito();
   }
 
-
+  public async loadVinyl() {
+    const filter = this.search.trim().length > 0 ? `?searchBy=${encodeURIComponent(this.search)}` : '';
+    try {
+      const productos = await this.productosService.getAll(filter);
+      this.productos = productos;
+    } catch (error) {
+      console.error('Error al cargar productos:', error);
+    }
+  }
+  
+  
+  
+  
 }

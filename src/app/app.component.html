@@ -13,6 +13,9 @@
         <span style="margin-right: 10px" [matBadge]="productos.length+''" matBadgeOverlap="false"
               matBadgePosition="below after">Carrito de compras</span>
       </button>
+      <form class = "form-inline">
+        <input type="search" class="form-control" placeholder="search" (keyup)="loadVinyl()" [(ngModel)]="search" name="search">
+      </form>
       <mat-menu #menu="matMenu">
         <button mat-menu-item *ngFor="let p of productos;">{{p.nombre}}  {{p.precio | currency}}</button>
         <button mat-menu-item>
@@ -26,7 +29,8 @@
     </mat-toolbar-row>
   </mat-toolbar>
   <mat-sidenav-container class="contenido">
-    <mat-sidenav style="min-width: 300px;" #cajon opened mode="side">
+    
+    <mat-sidenav style="min-width:300px;" #cajon opened mode="side">
       <mat-nav-list>
         <p style="margin-left: 4px;">Administrador</p>
         <a mat-list-item routerLink="/productos">
@@ -47,7 +51,7 @@
        
       </mat-nav-list>
     </mat-sidenav>
-    <mat-sidenav-content class="padding-10">
+    <mat-sidenav-content class="padding-10"> 
       <router-outlet></router-outlet>
     </mat-sidenav-content>
   </mat-sidenav-container>

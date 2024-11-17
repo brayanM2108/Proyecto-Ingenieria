@@ -61,9 +61,10 @@ app.use((req, res, next) => {
   res.set("Access-Control-Allow-Credentials", "true");
   res.set("Access-Control-Allow-Origin", DOMINIO_PERMITIDO_CORS);
   res.set("Access-Control-Allow-Headers", "Content-Type");
-  res.set("Access-Control-Allow-Methods", "DELETE");
+  res.set("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT, OPTIONS");
   next();
 });
+
 app.delete("/producto", async (req, res) => {
 
   if (!req.query.id) {
@@ -182,9 +183,16 @@ app.post('/producto', async (req, res) => {
 });
 
 app.get('/productos', async (req, res) => {
-  const productos = await productoModel.obtener();
-  res.json(productos);
-});
+  try {
+    let productName = new RegExp(`.*${req.query.searchBy || ''}.*`, 'i');
+    const products = await productoModel.find({ name: productName });
+    res.json(products);
+  } catch (error) {
+    console.error("Error obteniendo productos:", error);
+    res.status(500).json({ message: "Error al obtener productos", error: error.message });
+  }
+})
+
 app.get('/productos_con_fotos', async (req, res) => {
   const productos = await productoModel.obtenerConFotos();
   res.json(productos);
@@ -210,3 +218,4 @@ app.listen(PUERTO, err => {
   // Si no se detuvo arriba con el return, entonces todo va bien ;)
   console.log(`Escuchando en el puerto :${PUERTO}`);
 });
+
