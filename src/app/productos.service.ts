@@ -48,8 +48,8 @@ export class ProductosService {
   }
   
   public async getAll(filter) {
-    return await this.http.get("/productos".concat(filter));
-     
+    return await this.http.get("/productos/getAll".concat(filter));
+
     }
   
 
